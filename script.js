@@ -1,16 +1,18 @@
 import Particle from "./particle.js";
 
-const dpi = window.devicePixelRatio;
+// const dpi = window.devicePixelRatio;
 export const canvas = document.getElementById("canvas1");
 export const ctx = canvas.getContext("2d");
 
 // This function helps prevent stretching and blurring of canvas elements
 function fixDpi() {
-  const styleHeight = +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
-  const styleWidth = +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+  // const styleHeight = +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+  // const styleWidth = +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
 
-  canvas.setAttribute('height', styleHeight * dpi);
-  canvas.setAttribute('width', styleWidth * dpi);
+  // canvas.setAttribute('height', styleHeight * dpi);
+  // canvas.setAttribute('width', styleWidth * dpi);
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
 }
 
 let particleArray;
