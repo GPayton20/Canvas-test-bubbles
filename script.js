@@ -1,6 +1,6 @@
 import Particle from "./particle.js";
 
-// const dpi = window.devicePixelRatio;
+const dpi = window.devicePixelRatio;
 export const canvas = document.getElementById("canvas1");
 export const ctx = canvas.getContext("2d");
 
@@ -13,6 +13,8 @@ function fixDpi() {
   // canvas.setAttribute('width', styleWidth * dpi);
   canvas.width = innerWidth;
   canvas.height = innerHeight;
+  canvas.style.width = `${canvas.width}px`;
+  canvas.style.height = `${canvas.height}px`;
 }
 
 let particleArray;
